@@ -9,11 +9,17 @@
     "plugin:sonarjs/recommended",
     "plugin:security/recommended-legacy",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended"
   ],
   "rules": {
     "require-jsdoc": "off",
-    "prettier/prettier": ["error", { "semi": false }],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false
+      }
+    ],
     "new-cap": 0,
     "react/react-in-jsx-scope": 0
   }
