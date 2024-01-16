@@ -2,16 +2,7 @@
 import { Builder } from '@builder.io/react'
 import { Button } from './stories/Button'
 import Counter from './components/Counter/Counter'
-
-Builder.registerComponent(Counter, {
-  name: 'Counter',
-  inputs: [
-    {
-      name: 'initialCount',
-      type: 'number',
-    },
-  ],
-})
+import { Header } from './stories/Header'
 
 Builder.registerComponent(Button, {
   name: 'Button',
@@ -36,6 +27,41 @@ Builder.registerComponent(Button, {
     {
       name: 'size',
       type: 'string',
+    },
+  ],
+})
+
+Builder.registerComponent(Header, {
+  name: 'Header',
+  inputs: [
+    {
+      name: 'onCreateAccount',
+      type: 'string',
+      required: true,
+    },
+    {
+      name: 'onLogin',
+      type: 'string',
+      required: true,
+    },
+    {
+      name: 'onLogout',
+      type: 'string',
+      required: true,
+    },
+    {
+      name: 'user',
+      type: 'string',
+    },
+  ],
+})
+
+Builder.registerComponent(Counter, {
+  name: 'Counter',
+  inputs: [
+    {
+      name: 'initialCount',
+      type: 'number',
     },
   ],
 })
